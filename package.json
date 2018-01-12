@@ -1,0 +1,23 @@
+{
+  "name": "boundsound",
+  "version": "0.0.1",
+  "description": "Boundsound is a web based audiobook player and manager.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gsarpy/boundsound.git"
+  },
+  "author": "Gregory Sarpy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gsarpy/boundsound/issues"
+  },
+  "homepage": "https://github.com/gsarpy/boundsound#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "mongoose": "^4.13.9"
+  }
+}
