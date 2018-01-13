@@ -1,0 +1,38 @@
+$player-bg: #222222;
+
+.player {
+  background: $player-bg;
+  max-width: 300px;
+  padding: 1rem;
+  box-sizing: content-box;
+  text-align: center;
+  color: #fff;
+  display: inline-block;
+  margin-bottom: 3rem;
+
+  .controls {
+    width: 100%;
+    background: purple;
+    text-align: left;
+    padding: 1.25rem;
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.2rem;
+
+    }
+
+    ul, li {
+      list-style-type: none;
+      margin: 0;
+    }
+
+  }
+
+  img {
+    margin-bottom: 1.5rem;
+    max-height: 300px;
+    max-width: 300px;
+  }
+}

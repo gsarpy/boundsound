@@ -1,0 +1,27 @@
+.player {
+  background: #222222;
+  max-width: 300px;
+  padding: 1rem;
+  box-sizing: content-box;
+  text-align: center;
+  color: #fff;
+  display: inline-block;
+  margin-bottom: 3rem; }
+  .player .controls {
+    width: 100%;
+    background: purple;
+    text-align: left;
+    padding: 1.25rem; }
+    .player .controls ul {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.2rem; }
+    .player .controls ul, .player .controls li {
+      list-style-type: none;
+      margin: 0; }
+  .player img {
+    margin-bottom: 1.5rem;
+    max-height: 300px;
+    max-width: 300px; }
+
+/*# sourceMappingURL=styles.css.map */

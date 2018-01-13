@@ -1,9 +1,14 @@
-const express = require('express');
-const mongoose = require('mongoose');
+const express          = require('express');
+const parseurl         = require('parseurl');
+const bodyParser       = require('body-parser');
+const path             = require('path');
+const expressValidator = require('express-validator');
+const mongoose         = require('mongoose');
+const Signature        = require('./models/UserSchema');
+const app              = express();
+const db              = 'mongodb://localhost:27017/signatures';
 
-const app = express();
-
-app.get('/', {
+app.get('/', (req, res) => {
   res.send('Server is running');
 });
 

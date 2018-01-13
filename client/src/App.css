@@ -1,3 +1,13 @@
+body {
+  font-family: 'Oxygen', sans-serif;
+  background: #000!important;
+  color: #fff!important;
+  font-weight: 400;
+  font-size: 62.5%;
+  -webkit-font-smoothing:antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+
 .App {
   text-align: center;
 }
@@ -8,21 +18,35 @@
 }
 
 .App-header {
-  background-color: #222;
+  background-color: #570157;
   height: 150px;
   padding: 20px;
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
 }
 
 .App-title {
-  font-size: 1.5em;
+  font-size: 4.5rem;
+  margin: 0;
+  font-weight: 200;
 }
 
 .App-intro {
   font-size: large;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+input, .btn {
+  border-radius: 0!important;
+}
+
+input#search {
+  padding: 2rem 1rem;
+}
+
+.btn-primary {
+  background: purple!important;
+  border: 0!important;
 }

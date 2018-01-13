@@ -17,7 +17,11 @@
   },
   "homepage": "https://github.com/gsarpy/boundsound#readme",
   "dependencies": {
+    "body-parser": "^1.18.2",
     "express": "^4.16.2",
-    "mongoose": "^4.13.9"
+    "express-validator": "^4.3.0",
+    "mongoose": "^4.13.9",
+    "parseurl": "^1.3.2",
+    "path": "^0.12.7"
   }
 }

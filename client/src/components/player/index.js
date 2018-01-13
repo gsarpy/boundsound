@@ -1,15 +1,25 @@
 import React, { Component } from 'react';
+import '../../css/styles.css';
+
+import Controls from './controls.js';
 
 class Player extends Component {
+
+
   render() {
     return (
-      <div className="App">
+      <div className="player">
+        <div className="cover">
+          <img src={this.props.cover} alt={this.props.title} />
+        </div>
 
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
+        <h3>{this.props.title}</h3>
+        <p className="description">
+          {this.props.description}
         </p>
 
         <audio controls src="hello.mp3"></audio>
+        <Controls />
       </div>
     );
   }
