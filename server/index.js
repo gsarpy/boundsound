@@ -6,10 +6,9 @@ const expressValidator = require('express-validator');
 const mongoose         = require('mongoose');
 const Signature        = require('./models/UserSchema');
 const app              = express();
-const db              = 'mongodb://localhost:27017/signatures';
 
 app.get('/', (req, res) => {
-  res.send('Server is running');
+  res.send("Welcome to the root of this project.");
 });
 
 const PORT = 1337;
