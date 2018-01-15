@@ -22,6 +22,11 @@ const books = [
   }
 ];
 
+const userData = {
+  email: "",
+  password: "",
+}
+
 app.use(bodyParser.urlencoded({
   extended: true
 }));
@@ -43,4 +48,7 @@ app.listen(PORT, () => {
 app.post('/api/login', (req, res) => {
   console.log(req.body);
   res.send(req.body);
+
+  userData.email = req.body.email;
+  userData.password = req.body.password;
 });

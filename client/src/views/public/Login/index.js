@@ -6,33 +6,31 @@ class Login extends Component {
 
     this.state = {
       email: "",
+      password: ""
     }
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(e) {
-    const email = e.target.value;
 
+
+  handleChange(event) {
     this.setState({
-      email,
+      [event.target.id]: event.target.value,
     });
   }
 
-  handleSubmit(e) {
-    e.preventDefault();
-    const { email } = this.state;
+  handleSubmit(event) {
+    event.preventDefault();
+    const data = this.state;
     fetch('/api/login', {
-     method: 'POST',
-     headers: {
-       'Content-Type':'application/json'
-     },
-     body: {
-      "email": email
-     }
-    });
-    console.log("EMAIL", email)
+      method: 'POST',
+      headers: {
+        'Content-Type':'application/json'
+      },
+      body: JSON.stringify(data)
+    }).then(res => res.json());
   }
 
   render() {
@@ -40,7 +38,8 @@ class Login extends Component {
       <div>
         <h1>Login</h1>
         <form onSubmit={this.handleSubmit}>
-          <input type="text" onChange={this.handleChange} value={this.state.email} name="email" />
+          <input type="text" onChange={this.handleChange} id="email" value={this.state.email} name="email" />
+          <input type="password" onChange={this.handleChange} id="password" value={this.state.password} name="email" />
           <input type="submit" value="submit" />
         </form>
       </div>
