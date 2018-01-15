@@ -7,12 +7,30 @@ const mongoose         = require('mongoose');
 const Signature        = require('./models/UserSchema');
 const app              = express();
 
+const books = [
+  {
+    title: "Ready Player One",
+    isdn: "1234",
+    description: "A book about VR n shit",
+    cover: "https://images-na.ssl-images-amazon.com/images/M/MV5BODcxNjI4MzY2MF5BMl5BanBnXkFtZTgwMTE0NzUzNDM@._V1_UX182_CR0,0,182,268_AL_.jpg"
+  },
+  {
+    title: "Snow Crash",
+    isdn: "3241",
+    description: "hackers n shit delivering pizzas",
+    cover: "https://upload.wikimedia.org/wikipedia/en/d/d5/Snowcrash.jpg"
+  }
+]
+
 app.get('/', (req, res) => {
   res.send("Welcome to the root of this project.");
 });
 
-const PORT = 1337;
+app.get('/api/books', (req, res) => {
+  res.send(books);
+});
 
+const PORT = 1337;
 app.listen(PORT, () => {
   console.log("Boundsound is listening on port: " + PORT);
 })
