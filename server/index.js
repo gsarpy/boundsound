@@ -20,7 +20,12 @@ const books = [
     description: "hackers n shit delivering pizzas",
     cover: "https://upload.wikimedia.org/wikipedia/en/d/d5/Snowcrash.jpg"
   }
-]
+];
+
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+app.use(bodyParser.json())
 
 app.get('/', (req, res) => {
   res.send("Welcome to the root of this project.");
@@ -34,3 +39,8 @@ const PORT = 1337;
 app.listen(PORT, () => {
   console.log("Boundsound is listening on port: " + PORT);
 })
+
+app.post('/api/login', (req, res) => {
+  console.log(req.body);
+  res.send(req.body);
+});
