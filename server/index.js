@@ -47,8 +47,8 @@ app.listen(PORT, () => {
 
 app.post('/api/login', (req, res) => {
   console.log(req.body);
-  res.send(req.body);
-
   userData.email = req.body.email;
   userData.password = req.body.password;
+
+  res.status(200).json({ message: 'Received!' });
 });

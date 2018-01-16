@@ -27,10 +27,13 @@ class Login extends Component {
     fetch('/api/login', {
       method: 'POST',
       headers: {
-        'Content-Type':'application/json'
+        'Content-Type':'application/json',
+        'Accept': 'application/json'
       },
       body: JSON.stringify(data)
-    }).then(res => res.json());
+    }).then(res => res.json())
+      .catch(error => console.error('Error:', error))
+      .then(response => console.log('Success:', response));;
   }
 
   render() {

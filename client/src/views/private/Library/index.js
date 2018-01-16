@@ -59,7 +59,7 @@ class Library extends Component {
     const library = books.map((book) => {
       return (
         <div className="book" key={book.isdn}>
-          <img src={book.cover} />
+          <img src={book.cover} alt={book.title} />
           <h1>{book.title}</h1>
           <p>{book.description}</p>
           <a className="btn btn-primary"
